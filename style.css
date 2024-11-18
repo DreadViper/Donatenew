@@ -29,7 +29,7 @@ a{
 nav.right_logo {
     width: 80%;
     background:#feb21f;
-    padding: 15px 50px;
+    padding: 8px 50px 0px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -51,7 +51,7 @@ img.header_icon{
     height: 17px;
 }
 .banner_section {
-    height: 86vh;
+    height: 95vh;
     position: relative;
     overflow: hidden;
     /* background: url(./img/banner.jpg); */
@@ -61,7 +61,7 @@ img.header_icon{
 }
 
 .banner_overlay {
-    height: 86vh;
+    height: 100%;
     width: 100%;
     position: absolute;
     z-index: 3;
@@ -345,7 +345,7 @@ footer::after{
 }
 
 .left_logo {
-    height: 80px;
+    height: 63px;
 }
 
 .left_logo img {
@@ -507,9 +507,14 @@ footer::after{
 .counts_section {
     padding: 35px 0;
     margin-top: -8%;
-    background: white;
     z-index: 2;
     position: relative;
+}
+.counts_row{
+    background-color: white;
+    align-items: center;
+    text-align: center;
+    box-shadow: 1px 4px 10px #aba9a9;
 }
 .counter {
     font-size: 36px;
@@ -618,8 +623,8 @@ section.news_section {
 
 .text_bottom {
     background: black;
-    padding: 6%;
-    font-size: 13px;
+    padding: 5%;
+    font-size: 12px;
 }
 
 .news_card_content {
@@ -649,7 +654,7 @@ section.news_section {
 }
 
 .read_more_button {
-    margin-top: 20px;
+    margin-top: 0;
     border: none;
     background: white;
     text-transform: uppercase;
@@ -658,11 +663,12 @@ section.news_section {
     font-weight: 300;
     position: relative;
     padding-bottom: 4px;
+    color: #000;
 }
 
 .read_more_button span {
     position: absolute;
-    top: -2px;
+    top: 0;
     bottom: 0;
     transition: .5s;
     right: 0;
@@ -685,7 +691,7 @@ section.news_section {
 }
 
 .read_more_button:hover span {
-    right: -16px;
+    right: -18px;
     transition: .5s;
     opacity: 1;
 }
@@ -754,10 +760,13 @@ section.news_section {
     font-size: 20px;
     color: #fff;
     border: 2px solid white;
-    padding: 15px 10px 15px 21px;
+    padding: 15px 6px 11px 21px;
     border-radius: 35px;
-    width: 200px;
+    width: 190px;
     margin-top: 30px;
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
 }
 
 .donate_button span {
@@ -768,3 +777,23 @@ section.news_section {
     width: 25px;
 }
 
+
+
+.donate_button:after {
+    content: ' ';
+    position: absolute;
+    height: 100%;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background: #feb21f;
+    z-index: -1;
+    transition: .2s;
+    transform-origin: left;
+    opacity: 0;
+}
+.donate_button:hover::after{
+    width: 100%;
+    transition: .5s;
+    opacity: .7;
+}
