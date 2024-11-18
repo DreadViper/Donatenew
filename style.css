@@ -51,7 +51,7 @@ img.header_icon{
     height: 17px;
 }
 .banner_section {
-    height: 82vh;
+    height: 86vh;
     position: relative;
     overflow: hidden;
     /* background: url(./img/banner.jpg); */
@@ -61,7 +61,7 @@ img.header_icon{
 }
 
 .banner_overlay {
-    height: 82vh;
+    height: 86vh;
     width: 100%;
     position: absolute;
     z-index: 3;
@@ -410,7 +410,7 @@ footer::after{
     padding-bottom: 20px;
 }
 .icon_box img{
-    height: 30px;
+    height: 40px;
 }
 .social_media {
     display: flex;
@@ -506,6 +506,10 @@ footer::after{
 /* Style for the counter container */
 .counts_section {
     padding: 35px 0;
+    margin-top: -8%;
+    background: white;
+    z-index: 2;
+    position: relative;
 }
 .counter {
     font-size: 36px;
@@ -705,6 +709,7 @@ section.news_section {
     font-size: 45px;
     text-align: center;
     text-decoration: underline;
+    font-weight: 700;
 }
 
 /* caraousel css */
@@ -728,27 +733,31 @@ section.news_section {
 }
 .carousel-caption {
     position: absolute;
-    top: 25%;
+    top: 15%;
     left: 10%;
     bottom: unset;
     color: #fff;
     font-size: 35px;
     line-height: initial;
     text-align: left;
+    max-width: 50%;
 }
 .carousel-caption h5{
-    font-size: 85px;
+    font-size: 60px;
     text-shadow: 0px 0px 6px white;
 }
-
+.carousel-caption.d-none.d-md-block p {
+    font-size: 25px;
+    line-height: 40px;
+}
 .donate_button{
     font-size: 20px;
     color: #fff;
     border: 2px solid white;
-    padding: 8px 13px 6px;
+    padding: 15px 10px 15px 21px;
     border-radius: 35px;
-    width: 16%;
-    margin-top: 50px;
+    width: 200px;
+    margin-top: 30px;
 }
 
 .donate_button span {
@@ -756,5 +765,6 @@ section.news_section {
     /* border: 1px solid; */
 }
 .donate_button span img {
-    width: 30px;
+    width: 25px;
 }
+
