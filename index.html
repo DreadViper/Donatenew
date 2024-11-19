@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate now!</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -38,56 +39,78 @@
 
     <main>
         <section class="banner_section">
-            <div id="carouselExampleCaptions" class="carousel slide carousel-fade" >
+            <div id="carouselExampleCaptions" class="carousel slide carousel-fade">
                 <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                      <div class="banner_overlay"></div>
-                    <img src="img/banner1.png" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>Make a Difference Today</h5>
-                      <p>Your generosity can change lives. Join us in making a lasting impact on those who need it most.</p>
-                      <div class="donate_button">
-                        Donate Now<span><img src="img/right-arrow.png" alt="..."></span>
-                      </div>
+                        <div class="banner_overlay"></div>
+                        <img src="img/banner1.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Make a Difference Today</h5>
+                            <p>Your generosity can change lives. Join us in making a lasting impact on those who need it
+                                most.</p>
+                            <div class="donate_button">
+                                Donate Now<span><img src="img/right-arrow.png" alt="..."></span>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <div class="carousel-item">
-                      <div class="banner_overlay"></div>
-                    <img src="img/banner2.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>Every Contribution Counts</h5>
-                      <p>No donation is too small. Together, we can achieve extraordinary things. Your support is the key to hope.</p>
-                      <div class="donate_button">
-                        Donate Now<span><img src="img/right-arrow.png" alt="..."></span>
-                      </div>
+                    <div class="carousel-item">
+                        <div class="banner_overlay"></div>
+                        <img src="img/banner2.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Every Contribution Counts</h5>
+                            <p>No donation is too small. Together, we can achieve extraordinary things. Your support is
+                                the key to hope.</p>
+                            <div class="donate_button">
+                                Donate Now<span><img src="img/right-arrow.png" alt="..."></span>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <div class="carousel-item">
-                      <div class="banner_overlay"></div>
-                    <img src="img/banner4.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>See the Change You’ve Made</h5>
-                      <p>Your donation powers essential programs, bringing hope, health, and opportunity to communities in need.</p>
-                      <div class="donate_button">
-                        Donate Now<span><img src="img/right-arrow.png" alt="..."></span>
-                      </div>
+                    <div class="carousel-item">
+                        <div class="banner_overlay"></div>
+                        <img src="img/banner3sewing.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>See the Change You’ve Made</h5>
+                            <p>Your donation powers essential programs, bringing hope, health, and opportunity to
+                                communities in need.</p>
+                            <div class="donate_button">
+                                Donate Now<span><img src="img/right-arrow.png" alt="..."></span>
+                            </div>
+                        </div>
                     </div>
-                  </div>
+                    <div class="carousel-item">
+                        <div class="banner_overlay"></div>
+                        <img src="img/bannervent.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>See the Change You’ve Made</h5>
+                            <p>Your donation powers essential programs, bringing hope, health, and opportunity to
+                                communities in need.</p>
+                            <div class="donate_button">
+                                Donate Now<span><img src="img/right-arrow.png" alt="..."></span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
                 </button>
-              </div>
+            </div>
             <div class="donate_tag">
                 <a href="#">
                     <img src="img/donate.png" alt="donate">
@@ -97,7 +120,7 @@
                 </a>
             </div>
         </section>
-        <section class="counts_section">
+        <!-- <section class="counts_section">
             <div class="container">
                 <div class="row counts_row">
                     <div class="col count_wrap">
@@ -115,6 +138,85 @@
                             <span class="count" data-target="5000">0</span>+
                         </div> eye operations for glaucoma
                     </div>
+                </div>
+            </div>
+        </section> -->
+        <section class="achievements_section">
+            <div class="title_heading">
+                <div class="heading">Our Achievements</div>
+                <div class="pseudo_text">Look what we have achieved till now</div>
+            </div>
+            <div class="container py-5">
+                <div class="swiper-container">
+                    <!-- Swiper Wrapper (holds the slides) -->
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="achieve_card">
+                                <div class="achieve_card-body">
+                                    <h5 class="achieve_card-title">55 Million People Examined for Eye Health</h5>
+                                    <div class="achieve_card_img">
+                                        <img src="img/stats-icon/stats-icon-1.png" alt="">
+                                    </div>
+                                    <p class="achieve_card-text">Since 1966, Sightsavers India has examined over 55 million people for various eye health conditions, ensuring early detection and treatment</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <div class="achieve_card">
+                                <div class="achieve_card-body">
+                                    <h5 class="achieve_card-title">Card Title 2</h5>
+                                    <div class="achieve_card_img">
+                                        <img src="img/stats-icon/stats-icon-2.png" alt="">
+                                    </div>
+                                    <p class="achieve_card-text">Description for card 2.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <div class="achieve_card">
+                                <div class="achieve_card-body">
+                                    <h5 class="achieve_card-title">Card Title 3</h5>
+                                    <div class="achieve_card_img">
+                                        <img src="img/stats-icon/stats-icon-3.png" alt="">
+                                    </div>
+                                    <p class="achieve_card-text">Description for card 5.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide">
+                            <div class="achieve_card">
+                                <div class="achieve_card-body">
+                                    <h5 class="achieve_card-title">Card Title 4</h5>
+                                    <div class="achieve_card_img">
+                                        <img src="img/stats-icon/stats-icon-4.png" alt="">
+                                    </div>
+                                    <p class="achieve_card-text">Description for card 5.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 5 -->
+                        <div class="swiper-slide">
+                            <div class="achieve_card">
+                                <div class="achieve_card-body">
+                                    <h5 class="achieve_card-title">Card Title 5</h5>
+                                    <div class="achieve_card_img">
+                                        <img src="img/stats-icon/stats-icon-5.png" alt="">
+                                    </div>
+                                    <p class="achieve_card-text">Description for card 5.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Swiper Pagination (Optional) -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- Swiper Navigation Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
             </div>
         </section>
@@ -173,7 +275,7 @@
                             </div>
                         </a>
                     </div>
-           
+
                 </div>
             </div>
         </section>
@@ -240,79 +342,81 @@
                 </div>
             </div>
         </section> -->
-       
+
         <section class="news_section">
             <div class="title_heading">
                 <div class="heading">Latest News</div>
                 <div class="pseudo_text">Take an insight about what happening</div>
             </div>
             <div class="container">
-              <div class="news_card_wrapper">
-                <div class="news_card">
-                  <div class="news_card_image">
-                    <img src="img/education.jpg" alt="">
-                    <div class="news_image_tag">
-                      <div class="text_top">27</div>
-                      <div class="text_bottom">AUG 24</div>
+                <div class="news_card_wrapper">
+                    <div class="news_card">
+                        <div class="news_card_image">
+                            <img src="img/education.jpg" alt="">
+                            <div class="news_image_tag">
+                                <div class="text_top">27</div>
+                                <div class="text_bottom">AUG 24</div>
+                            </div>
+                        </div>
+                        <div class="news_card_content">
+                            <div class="location_tag">&#x2022; Punjab</div>
+                            <div class="headlines">
+                                Exploring the Wilderness: An Introduction to Corbett and Ramnagar
+                            </div>
+                            <p>
+                                Nestled in the foothills of the majestic Himalayas lies a sanctuary of natural.
+                            </p>
+                            <a href="#"><button type="button" class="read_more_button">Read more
+                                    <span>&#x279C;</span></button></a>
+                        </div>
                     </div>
-                  </div>
-                  <div class="news_card_content">
-                    <div class="location_tag">&#x2022; Punjab</div>
-                    <div class="headlines">
-                      Exploring the Wilderness: An Introduction to Corbett and Ramnagar
+                    <div class="news_card">
+                        <div class="news_card_image">
+                            <img src="img/eyetest.jpg" alt="">
+                            <div class="news_image_tag">
+                                <div class="text_top">27</div>
+                                <div class="text_bottom">AUG 24</div>
+                            </div>
+                        </div>
+                        <div class="news_card_content">
+                            <div class="location_tag">&#x2022; Delhi</div>
+                            <div class="headlines">
+                                New PostDiscovering the Untamed Beauty: Wildlife and Nature Spotlights in Corbett
+                                National Park
+                            </div>
+                            <p>
+                                Nestled in the heart of the Himalayan foothills, Corbett National Park stands as a
+                            </p>
+                            <a href="#">
+                                <button type="button" class="read_more_button">Read more <span>&#x279C;</span></button>
+                            </a>
+                        </div>
                     </div>
-                    <p>
-                      Nestled in the foothills of the majestic Himalayas lies a sanctuary of natural.
-                    </p>
-                    <a href="#"><button type="button" class="read_more_button">Read more <span>&#x279C;</span></button></a>
-                  </div>
+                    <div class="news_card">
+                        <div class="news_card_image">
+                            <img src="img/testcamp.jpg" alt="">
+                            <div class="news_image_tag">
+                                <div class="text_top">27</div>
+                                <div class="text_bottom">AUG 24</div>
+                            </div>
+                        </div>
+                        <div class="news_card_content">
+                            <div class="location_tag">&#x2022; Corbett</div>
+                            <div class="headlines">
+                                Exploring Beyond the Wilderness: Local Attractions and Activities in Corbett
+                            </div>
+                            <p>
+                                While Corbett National Park enchants visitors with its untamed wilderness and
+                            </p>
+                            <a href="#">
+                                <button type="button" class="read_more_button">Read more <span>&#x279C;</span></button>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="news_card">
-                  <div class="news_card_image">
-                    <img src="img/eyetest.jpg" alt="">
-                    <div class="news_image_tag">
-                      <div class="text_top">27</div>
-                      <div class="text_bottom">AUG 24</div>
-                    </div>
-                  </div>
-                  <div class="news_card_content">
-                    <div class="location_tag">&#x2022; Delhi</div>
-                    <div class="headlines">
-                      New PostDiscovering the Untamed Beauty: Wildlife and Nature Spotlights in Corbett National Park
-                    </div>
-                    <p>
-                      Nestled in the heart of the Himalayan foothills, Corbett National Park stands as a
-                    </p>
-                    <a href="#">
-                      <button type="button" class="read_more_button">Read more <span>&#x279C;</span></button>
-                    </a>
-                  </div>
-                </div>
-                <div class="news_card">
-                  <div class="news_card_image">
-                    <img src="img/testcamp.jpg" alt="">
-                    <div class="news_image_tag">
-                      <div class="text_top">27</div>
-                      <div class="text_bottom">AUG 24</div>
-                    </div>
-                  </div>
-                  <div class="news_card_content">
-                    <div class="location_tag">&#x2022; Corbett</div>
-                    <div class="headlines">
-                      Exploring Beyond the Wilderness: Local Attractions and Activities in Corbett
-                    </div>
-                    <p>
-                      While Corbett National Park enchants visitors with its untamed wilderness and
-                    </p>
-                    <a href="#">
-                      <button type="button" class="read_more_button">Read more <span>&#x279C;</span></button>
-                    </a>
-                  </div>
-                </div>
-              </div>
             </div>
-          </section>
-       
+        </section>
+
         <section class="details_section">
             <div class="details_overlay"></div>
             <div class="container">
@@ -445,7 +549,21 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
+        const swiper = new Swiper('.swiper-container', {
+            slidesPerView: 3,  // Show 3 cards at a time
+            spaceBetween: 60,   // Space between slides
+            loop: true,         // Loop the slides
+            navigation: {       // Enable navigation arrows
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {       // Enable pagination dots
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
         // Generic function to handle the counting effect, with dynamic starting point
         function countUp() {
             const counters = document.querySelectorAll('.count'); // Select all counter elements
