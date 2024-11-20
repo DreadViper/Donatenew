@@ -706,7 +706,6 @@ footer::after {
 .carousel-caption {
     position: absolute;
     top: 0;
-    /* left: 10%; */
     bottom: unset;
     color: #fff;
     font-size: 35px;
@@ -796,6 +795,7 @@ footer::after {
     width: 100%;
     text-align: center;
     transition: .5s;
+    min-height: 425px;
 }
 
 .achieve_card-body {
@@ -858,4 +858,7 @@ footer::after {
 .achieve_card:hover {
     transition: .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     box-shadow: 0 0 8px #292828;
+}
+.swiper-slide {
+    margin-right: 0 !important;
 }
