@@ -857,7 +857,7 @@ footer::after {
 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
     bottom: auto;}
 
-    @media screen and (min-width:1024px) {
+    @media screen and (max-width:1025px) {
         .carousel-caption{
             top: 5%;
             left: 8%;
