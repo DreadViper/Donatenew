@@ -28,6 +28,11 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    background: #fff;
+    box-shadow: 0 0 4px grey;
 }
 nav.right_logo {
     width: 80%;
@@ -56,6 +61,7 @@ img.header_icon {
 .banner_section {
     height: 95vh;
     position: relative;
+    top: 8.6vh;
     overflow: hidden;
     /* background: url(./img/banner.jpg); */
     background-repeat: no-repeat;
@@ -95,7 +101,7 @@ h1.banner_text span {
     width: 33%;
     height: 50vh;
     background-color: var(--secondary-color);
-    box-shadow: 0 4px 20px #9f9595;
+    box-shadow: 0 4px 10px #9f9595;
     color: white;
     font-size: 30px;
     font-weight: 700;
@@ -106,14 +112,17 @@ h1.banner_text span {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: .5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
 .cards:nth-child(2) {
     background: var(--primary-color);
-    box-shadow: 1px 5px 20px #474545;
     z-index: 5;
 }
-
+.cards:hover{
+    transition: .5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    box-shadow: 1px 5px 20px #474545;
+}
 .cards_section {
     padding: 65px 0;
     position: relative;
@@ -358,7 +367,7 @@ footer::after {
 }
 
 .left_logo {
-    height: 63px;
+    height: 60px;
 }
 
 .left_logo img {
@@ -522,9 +531,6 @@ footer::after {
     font-size: 20px;
 }
 
-@media screen and (max-width:1024px) {
-    
-}
 
 .news_card_wrapper {
     display: flex;
@@ -705,7 +711,7 @@ footer::after {
 
 .carousel-caption {
     position: absolute;
-    top: 0;
+    top: 15%;
     bottom: unset;
     color: #fff;
     font-size: 35px;
@@ -780,6 +786,7 @@ footer::after {
 .achievements_section {
     position: relative;
     padding: 45px 0;
+    top: 8.6vh;
 }
 
 .achievements_section .swiper-horizontal {
@@ -795,7 +802,7 @@ footer::after {
     width: 100%;
     text-align: center;
     transition: .5s;
-    min-height: 425px;
+    min-height: 380px;
 }
 
 .achieve_card-body {
@@ -830,35 +837,59 @@ footer::after {
     position: relative;
 }
 
+.achieve_card_img img {
+    width: 105px;
+}
 .swiper-button-next, .swiper-button-prev{
     color: var(--primary-color);
+    top: var(--swiper-navigation-top-offset, 60%);
+    width: calc(var(--swiper-navigation-size) / 44* 120);
+
 }
 .swiper-pagination-bullet-active{
     background-color: var(--primary-color);
 }
 
-/* .achieve_card_img:after {
-    content: ' ';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background: #711758;
-    top: -10px;
-    left: 0;
-    transition: .5s;
-    transform: scale(0);
-    transform-origin: center;
-}
-
-.achieve_card:hover .achieve_card_img:after {
-    transition: .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    transform: scale(1);
-} */
-
 .achieve_card:hover {
     transition: .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     box-shadow: 0 0 8px #292828;
 }
-.swiper-slide {
-    margin-right: 0 !important;
-}
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: auto;}
+
+    @media screen and (min-width:1024px) {
+        .carousel-caption{
+            top: 5%;
+            left: 8%;
+            right: 8%;
+            max-width: 100%;
+            transform: translate(0 , 25%);
+        }
+        .carousel-caption h5 {
+            font-size: 50px;
+        }
+        .carousel-control-next, .carousel-control-prev{
+            width: 8%;
+        }
+        .swiper-button-next, .swiper-button-prev {
+            width: calc(var(--swiper-navigation-size) / 44* 60);
+        }
+        p.achieve_card-text {
+            font-size: 15px;
+            text-align: justify;
+            margin-bottom: 0;
+            line-height: initial;
+        }
+        .achieve_card-body h5 {
+            font-size: 23px;
+        }
+        .cards{
+            font-size: 24px;
+        }
+        .news_image_tag{
+            width: 18%;
+        }
+        .query_section {
+            padding: 25px 0;
+        }
+    }

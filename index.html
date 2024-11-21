@@ -557,18 +557,33 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         const swiper = new Swiper('.swiper-container', {
-            slidesPerView: 3,  // Show 3 cards at a time
-            spaceBetween: 60,   // Space between slides
-            loop: true,         // Loop the slides
-            navigation: {       // Enable navigation arrows
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            pagination: {       // Enable pagination dots
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-        });
+    slidesPerView: 3,  // Show 3 cards at a time by default
+    spaceBetween: 60,   // Space between slides
+    loop: true,         // Loop the slides
+    navigation: {       // Enable navigation arrows
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination: {       // Enable pagination dots
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    breakpoints: {      // Add breakpoints to adjust slidesPerView based on screen width
+        1024: {
+            slidesPerView: 3,  // Show 3 cards at a time for screens 1024px and up
+            spaceBetween: 0,   // Space between slides
+        },
+        768: {
+            slidesPerView: 2,  // Show 2 cards at a time for screens 768px and up
+            spaceBetween: 0,   // Space between slides
+        },
+        576: {
+            slidesPerView: 1,  // Show 1 card at a time for screens 576px and up
+            spaceBetween: 20,   // Space between slides
+        }
+    }
+});
+
         // Generic function to handle the counting effect, with dynamic starting point
         function countUp() {
             const counters = document.querySelectorAll('.count'); // Select all counter elements
