@@ -18,6 +18,7 @@
 
 body {
     font-family: Acumin;
+    overflow-x: hidden;
 }
 a {
     color: #fff;
@@ -699,10 +700,6 @@ footer::after {
     height: 100%;
 }
 
-.carousel-caption {
-    z-index: 5;
-}
-
 .carousel-item img {
     height: 100%;
     object-fit: cover;
@@ -711,7 +708,7 @@ footer::after {
 
 .carousel-caption {
     position: absolute;
-    top: 15%;
+    top: 30%;
     bottom: unset;
     color: #fff;
     font-size: 35px;
@@ -719,6 +716,7 @@ footer::after {
     text-align: left;
     max-width: 65%;
     transform: translate(0, 50%);
+    z-index: 5;
 }
 
 .carousel-caption h5 {
@@ -859,7 +857,6 @@ footer::after {
 
     @media screen and (max-width:1025px) {
         .carousel-caption{
-            top: 5%;
             left: 8%;
             right: 8%;
             max-width: 100%;
