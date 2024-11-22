@@ -31,7 +31,7 @@ a {
 nav.right_logo {
     width: 80%;
     background: var(--secondary-color);
-    padding: 8px 50px 0px;
+    padding: 0px 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -120,7 +120,7 @@ h1.banner_text span {
     box-shadow: 1px 5px 20px #474545;
 }
 .cards_section {
-    padding: 25px 0 65px;
+    padding: 0 0 65px;
     position: relative;
 }
 
@@ -664,7 +664,7 @@ footer::after {
 }
 
 .news_section {
-    padding: 45px 0;
+    padding: 0px 0 45px 0;
 }
 
 .cards:after {
@@ -677,13 +677,17 @@ footer::after {
 
 .title_heading {
     text-align: center;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
 }
 
 .heading {
-    font-size: 45px;
+    font-size: 30px;
     text-align: center;
     font-weight: 700;
+}
+.pseudo_text {
+    width: 70%;
+    margin: auto;
 }
 
 /* carousel css */
@@ -875,6 +879,18 @@ footer::after {
           transform: translateY(0);
         }
       }
+      @media screen and (max-width:1281px){
+        .carousel-caption{
+            top: 25%;
+        }
+        .carousel-caption h5{
+            font-size: 50px;
+        }
+        .carousel-caption p{
+            font-size: 25px;
+            line-height: 35px;
+        }
+      }
     @media screen and (max-width:1025px) {
         .carousel-caption{
             left: 8%;
@@ -936,16 +952,16 @@ footer::after {
             font-size: 40px;
         }
     }
-    @media screen and (max-width:576px) {
-        nav.right_logo{
-            padding: 8px 15px 0;
+    @media screen and (max-width:577px) {
+        nav.right_logo {
+            padding: 0 15px;
         }
         .carousel-caption{
             top: 25%;
             text-align: center;
         }
         .carousel-caption h5 {
-            font-size: 40px;
+            font-size: 35px;
         }
         .carousel-caption p{
             font-size: 20px;
@@ -958,16 +974,20 @@ footer::after {
         .donate_tag img {
             width: 70%;
         }
-        .donate_button{
-            padding: 11px 6px 8px 15px;
-            width: 190px;
-            margin-left: 25%;
+        .donate_button {
+            padding: 6px 10px;
+            width: 160px;
+            margin: auto;
+            font-size: 16px;
         }
         .swiper-button-next, .swiper-button-prev {
             width: calc(var(--swiper-navigation-size) / 44* 10);
         }
         .cards_section {
             padding: 25px 0 0;
+        }
+        .achieve_card {
+            min-height: 300px;
         }
         .cards_row {
             display: block;
@@ -982,6 +1002,9 @@ footer::after {
         }
         .text_wrapper{
             padding: 45px 35px;
+        }
+        .query_input input[type='button']{
+            margin-left: unset;
         }
         .top_text{
             font-size: 25px;
@@ -1031,22 +1054,68 @@ footer::after {
             font-size: 20px;
         }
     }
+    @media screen and (max-width:475px) {
+        .copylisting ul {
+            display: list-item;
+            list-style: none;
+            column-count: 2;
+            text-align: left;
+            margin-left: 3%;
+        } 
+        .heading {
+            line-height: initial;
+            padding-bottom: 20px;
+        } 
+    }
 
     @media screen and (max-width:376px){
+        .left_logo{
+            height: 50px;
+        }
+        .donar_name{
+            font-size: 15px;
+        }
+        .copylisting ul {
+            column-count: 1;
+        }  
         .text_wrapper {
             padding: 35px 15px;
+        }
+        .cards_row{
+            margin-left: 5%;
+        }
+        .cards{
+            width: 100%;
+        }
+        .contact_info{
+            gap: 15px;
+        }
+        .grid_card_content {
+            font-size: 15px;
         }
         .square_grid_content{
             height: 35vh;
         }
         footer::after {
-            left: 45%;
+            left: 35%;
         } 
         .copyright{
             font-size: 10px;
         }  
         .swiper-button-next:after, .swiper-button-prev:after {
             font-size: 25px;
+        }
+        .bottom_text{
+            font-size: 50px;
+        }
+        .footer_logo{
+            width: 280px;
         } 
-               
+        .query_input input[type='text']{
+            width: 280px;
+        }
+            
+        .social_media {
+            gap: 10px;
+        }
     }
