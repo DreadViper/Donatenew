@@ -709,7 +709,7 @@ footer::after {
 
 .carousel-caption {
     position: absolute;
-    top: 30%;
+    top: 15%;
     bottom: unset;
     color: #fff;
     font-size: 35px;
@@ -913,8 +913,36 @@ footer::after {
         }
     }
     @media screen and (max-width:576px) {
+        nav.right_logo{
+            padding: 8px 15px 0;
+        }
+        .carousel-caption{
+            text-align: center;
+        }
+        .carousel-caption h5 {
+            font-size: 40px;
+        }
+        .carousel-caption p{
+            font-size: 20px;
+            line-height: 30px;
+        }
         .donate_tag{
-            background-color: #711758c4;
+            height: 60px;
+            width: 60px;
+        }
+        .donate_tag img {
+            width: 70%;
+        }
+        .donate_button{
+            padding: 11px 6px 8px 15px;
+            width: 190px;
+            margin-left: 25%;
+        }
+        .swiper-button-next, .swiper-button-prev {
+            width: calc(var(--swiper-navigation-size) / 44* 10);
+        }
+        .cards_section {
+            padding: 65px 0 0;
         }
         .cards_row {
             display: block;
