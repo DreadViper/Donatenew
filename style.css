@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -6,18 +7,10 @@
     --primary-color: #711758;   /* Primary color */
     --secondary-color: #feb21f;  /* Secondary color */
 }
-@font-face {
-    font-family: Acumin;
-    src: url("Acumin-RPro.otf");
-}
 
-@font-face {
-    font-family: Acumin_title;
-    src: url("Acumin-BdPro.otf");
-}
 
 body {
-    font-family: Acumin;
+    font-family: "Lato",sans-serif;
     overflow-x: hidden;
 }
 a {
@@ -60,9 +53,8 @@ img.header_icon {
     height: 17px;
 }
 .banner_section {
-    height: 95vh;
+    height: 100vh;
     position: relative;
-    top: 8.6vh;
     overflow: hidden;
     /* background: url(./img/banner.jpg); */
     background-repeat: no-repeat;
@@ -80,7 +72,7 @@ img.header_icon {
 
 h1.banner_text span {
     color: var(--secondary-color);
-    font-family: Acumin_title;
+    font-family: "Lato", sans-serif;;
     font-weight: 700;
 }
 
@@ -120,12 +112,15 @@ h1.banner_text span {
     background: var(--primary-color);
     z-index: 5;
 }
+.cards:nth-child(2) .icon_box{
+    background-color: var(--secondary-color);
+}
 .cards:hover{
     transition: .5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
     box-shadow: 1px 5px 20px #474545;
 }
 .cards_section {
-    padding: 65px 0;
+    padding: 25px 0 65px;
     position: relative;
 }
 
@@ -169,7 +164,7 @@ section.details_section {
 .bottom_text {
     font-size: 90px;
     font-weight: 900;
-    font-family: Acumin_title;
+    font-family: "Lato", sans-serif;;
     margin: 0;
     margin-left: -5px;
     padding: 0;
@@ -302,7 +297,7 @@ footer {
 footer::after {
     background: url(./img/india.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     content: '';
     position: absolute;
@@ -321,7 +316,7 @@ footer::after {
 
 .footer_text {
     font-size: 20px;
-    font-weight: 100;
+    font-weight: 300;
     line-height: initial;
     text-transform: uppercase;
 }
@@ -354,8 +349,10 @@ footer::after {
 }
 
 .listings li:hover a, .copylisting ul li:hover a {
+    transition: .8s;
     text-decoration: underline;
     color: var(--secondary-color);
+    /* transition: .5s; */
 }
 
 .footer_logo {
@@ -420,13 +417,14 @@ footer::after {
 
 .icon_box {
  padding: 35px 0;
-    border: 4px solid white;
-    border-radius: 50%;
-    height: 100px;
-    width: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+ border: 2px solid white;
+ background: #711758;
+ border-radius: 50%;
+ height: 100px;
+ width: 100px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
 }
 
 .img-class {
@@ -709,43 +707,42 @@ footer::after {
 
 .carousel-caption {
     position: absolute;
-    top: 15%;
+    top: 35%;
     bottom: unset;
     color: #fff;
-    font-size: 35px;
+    font-size: 30px;
     line-height: initial;
     text-align: left;
-    max-width: 65%;
-    transform: translate(0, 50%);
+    max-width: 100%;
     z-index: 5;
+    animation: slideInLeft 1s ease-out forwards;
 }
 
 .carousel-caption h5 {
-    font-size: 60px;
-    text-shadow: 0px 0px 6px white;
+    font-weight: 600;
+    font-size: 55px;
+    text-shadow: 0px 2px 4px white;
 }
-
-.carousel-caption.d-none.d-md-block p {
-    font-size: 25px;
-    line-height: 40px;
+.carousel-caption p{
+    padding: 20px 0;
 }
 
 .donate_button {
     font-size: 20px;
     color: #fff;
     border: 2px solid white;
-    padding: 15px 6px 11px 21px;
+    padding: 10px 18px;
     border-radius: 35px;
     width: 190px;
-    margin-top: 30px;
+    background: #feb21f;
     position: relative;
     z-index: 3;
     overflow: hidden;
+    font-weight: 600;
 }
 
 .donate_button span {
     padding-left: 12px;
-    /* border: 1px solid; */
 }
 
 .donate_button span img {
@@ -759,7 +756,7 @@ footer::after {
     width: 0;
     bottom: 0;
     left: 0;
-    background: var(--secondary-color);
+    background: var(--primary-color);
     z-index: -1;
     transition: .2s;
     transform-origin: left;
@@ -769,7 +766,7 @@ footer::after {
 .donate_button:hover::after {
     width: 100%;
     transition: .5s;
-    opacity: .7;
+    opacity: 1;
 }
 
 .swiper-slide {
@@ -785,7 +782,6 @@ footer::after {
 .achievements_section {
     position: relative;
     padding: 45px 0;
-    top: 8.6vh;
 }
 
 .achievements_section .swiper-horizontal {
@@ -801,7 +797,7 @@ footer::after {
     width: 100%;
     text-align: center;
     transition: .5s;
-    min-height: 380px;
+    min-height: 420px;
 }
 
 .achieve_card-body {
@@ -811,7 +807,7 @@ footer::after {
 .achieve_card-body h5 {
     font-size: 30px;
     font-weight: 700;
-    font-family: 'Acumin_title';
+    font-family: "Lato", sans-serif;;
     color: #000;
 }
 .achieve_card:after {
@@ -856,12 +852,34 @@ footer::after {
 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
     bottom: auto;}
 
+    @keyframes slideInLeft {
+        0% {
+            transform: translateY(100%);
+            opacity: 0;
+          }
+          100% {
+            transform: translateY(0);
+            opacity: 1;
+          }
+      }
+      .letter {
+        display: inline-block;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.5s forwards;
+      }
+      
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
     @media screen and (max-width:1025px) {
         .carousel-caption{
             left: 8%;
             right: 8%;
             max-width: 100%;
-            transform: translate(0 , 25%);
         }
         .carousel-caption h5 {
             font-size: 50px;
@@ -871,6 +889,9 @@ footer::after {
         }
         .swiper-button-next, .swiper-button-prev {
             width: calc(var(--swiper-navigation-size) / 44* 60);
+        }
+        .achieve_card{
+            min-height: 380px;
         }
         p.achieve_card-text {
             font-size: 15px;
@@ -942,7 +963,7 @@ footer::after {
             width: calc(var(--swiper-navigation-size) / 44* 10);
         }
         .cards_section {
-            padding: 65px 0 0;
+            padding: 25px 0 0;
         }
         .cards_row {
             display: block;
@@ -993,4 +1014,22 @@ footer::after {
             top: 10%;
             left: 50%;
         }
+    }
+
+    @media screen and (max-width:376px){
+        .text_wrapper {
+            padding: 35px 15px;
+        }
+        .heading{
+            font-size: 45px;
+        }
+        .square_grid_content{
+            height: 35vh;
+        }
+        footer::after {
+            left: 45%;
+        } 
+        .copyright{
+            font-size: 10px;
+        }           
     }
