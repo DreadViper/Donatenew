@@ -464,7 +464,7 @@
                     <li><a href="#">Safeguarding</a></li>
                 </ul>
             </div>
-            <p class="mb-0">© 2024 Sightsavers. Registered in the UK as Royal Commonwealth Society for the Blind,
+            <p class="mb-0">© 2024 Sightsavers. Registered in the India as Royal Commonwealth Society for the Blind,
                 charity numbers 207544 and SC038110.</p>
         </div>
     </footer>
@@ -539,35 +539,86 @@
         window.onload = countUp;
         
         document.addEventListener("DOMContentLoaded", function() {
-        // Select all divs with class "animate-text"
-        const divsToAnimate = document.querySelectorAll('.animate-text');
+  // Function to check if screen width is greater than 576px
+  function isLargeScreen() {
+    return window.innerWidth >= 576;
+  }
+
+  // Run the animation script only if the screen width is larger than 576px
+  if (isLargeScreen()) {
+    // Select all divs with class "animate-text"
+    const divsToAnimate = document.querySelectorAll('.animate-text');
+    
+    divsToAnimate.forEach(function(div) {
+      const text = div.innerText;  // Get the text from the div
+      div.innerHTML = '';  // Clear the existing text content
+
+      // Loop through each character of the text and create a span for each letter
+      Array.from(text).forEach((char, index) => {
+        const span = document.createElement('span');
         
-        divsToAnimate.forEach(function(div) {
-            const text = div.innerText;  // Get the text from the div
-            div.innerHTML = '';  // Clear the existing text content
+        // Check if the character is a space
+        if (char === ' ') {
+          span.classList.add('space');
+          span.innerHTML = '&nbsp;';  // Use non-breaking space
+        } else {
+          span.classList.add('letter');
+          span.innerText = char;
+        }
 
-            // Loop through each character of the text and create a span for each letter
-            Array.from(text).forEach((char, index) => {
-            const span = document.createElement('span');
-            
-            // Check if the character is a space
-            if (char === ' ') {
-                span.classList.add('space');
-                span.innerHTML = '&nbsp;';  // Use non-breaking space
-            } else {
-                span.classList.add('letter');
-                span.innerText = char;
-            }
+        // Delay each character's animation based on its index
+        span.style.animationDelay = `${index * 0.1}s`;
 
-            // Delay each character's animation based on its index
-            span.style.animationDelay = `${index * 0.1}s`;
+        // Append the span element to the div
+        div.appendChild(span);
+      });
+    });
+  } else {
+    // If screen size is smaller than 576px, just ensure no animation is applied
+    const divsToAnimate = document.querySelectorAll('.animate-text');
+    divsToAnimate.forEach(function(div) {
+      div.innerHTML = div.innerText;  // Restore original text without animation
+    });
+  }
 
-            // Append the span element to the div
-            div.appendChild(span);
-            });
+  // Optional: Handle resizing dynamically to ensure it behaves correctly
+  window.addEventListener('resize', function() {
+    if (isLargeScreen()) {
+      // Reapply animation if resized above 576px
+      const divsToAnimate = document.querySelectorAll('.animate-text');
+      divsToAnimate.forEach(function(div) {
+        const text = div.innerText;  // Get the text from the div
+        div.innerHTML = '';  // Clear the existing text content
+
+        // Loop through each character of the text and create a span for each letter
+        Array.from(text).forEach((char, index) => {
+          const span = document.createElement('span');
+          
+          // Check if the character is a space
+          if (char === ' ') {
+            span.classList.add('space');
+            span.innerHTML = '&nbsp;';  // Use non-breaking space
+          } else {
+            span.classList.add('letter');
+            span.innerText = char;
+          }
+
+          // Delay each character's animation based on its index
+          span.style.animationDelay = `${index * 0.1}s`;
+
+          // Append the span element to the div
+          div.appendChild(span);
         });
-        });
-
+      });
+    } else {
+      // Restore text without animation for smaller screens
+      const divsToAnimate = document.querySelectorAll('.animate-text');
+      divsToAnimate.forEach(function(div) {
+        div.innerHTML = div.innerText;  // Restore original text without animation
+      });
+    }
+  });
+});
 
     </script>
 </body>
