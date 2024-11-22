@@ -31,7 +31,7 @@ a {
 nav.right_logo {
     width: 80%;
     background: var(--secondary-color);
-    padding: 0px 50px;
+    padding: 5px 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
