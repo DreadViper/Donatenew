@@ -13,6 +13,9 @@ body {
     font-family: "Lato",sans-serif;
     overflow-x: hidden;
 }
+section{
+    overflow-x: hidden;
+}
 a {
     color: #fff;
     text-decoration: none;
@@ -703,6 +706,7 @@ footer::after {
 /* carousel css */
 .carousel {
     height: 100%;
+    background-color: #000;
 }
 
 .carousel-inner {
