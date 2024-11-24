@@ -814,9 +814,6 @@ footer::after {
     padding: 45px 0;
 }
 
-
-
-
 .swiper-slide {
     background: transparent;
     display: flex;
@@ -841,7 +838,8 @@ footer::after {
     padding: 10% 15%;
     position: relative;
     color: #fff;
-    
+    min-height: 420px;
+    overflow: hidden;
 }
 .achive_overlay {
     position: absolute;
@@ -858,7 +856,7 @@ footer::after {
     z-index: 3;
 }
 .achive_overlay2{
-background-color: var(--primary-color);
+    background-color: var(--primary-color);
 }
 .achieve_title {
     font-size: 45px;
@@ -913,7 +911,13 @@ background-color: var(--primary-color);
         .carousel-control-next, .carousel-control-prev{
             width: 8%;
         }
-        
+        .news_card_content p{
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
         
         .cards{
             font-size: 24px;
@@ -945,13 +949,16 @@ background-color: var(--primary-color);
         .social_media{
             gap: 15px;
         }
+        .animate-text {
+            font-size: 70px;
+        }
     }
     @media screen and (max-width:577px) {
         nav.right_logo {
-            padding: 0 15px;
+            padding: 5px 15px;
         }
         .carousel-caption{
-            top: 25%;
+            top: 40%;
             text-align: center;
         }
         .carousel-caption h5 {
@@ -973,6 +980,7 @@ background-color: var(--primary-color);
             width: 160px;
             margin: auto;
             font-size: 16px;
+            margin-top: 30px;
         }
         
         .cards_section {
@@ -1052,6 +1060,12 @@ background-color: var(--primary-color);
             line-height: initial;
             padding-bottom: 20px;
         } 
+        .achievement_card{
+            padding: 10%;
+        }
+        .animate-text {
+            font-size: 40px;
+        }
     }
 
     @media screen and (max-width:376px){

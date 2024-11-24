@@ -215,7 +215,7 @@
         
             <div class="row">
                 <!-- First Swiper -->
-                <div class="col-6 slider-padding" data-aos="fade-right">
+                <div class="col--lg-6 col-md-12 col-sm-12 slider-padding" data-aos="fade-right">
                     <div class="swiper-container" id="swiper1">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
@@ -262,7 +262,7 @@
                 </div>
             
                 <!-- Second Swiper -->
-                <div class="col-6 slider-padding" data-aos="fade-left" data-aos-duration="500">
+                <div class="col-lg-6 col-md-12 col-sm-12 slider-padding" data-aos="fade-left" data-aos-duration="500">
                     <div class="swiper-container" id="swiper2">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
@@ -580,10 +580,10 @@
         loop: true,  // Enable looping
         spaceBetween: 10,  // Space between slides
         slidesPerView: 1,  // Only 1 slide visible at a time
-        autoplay: {
-            delay: 2000,  // 2 seconds
-            disableOnInteraction: false, // Keeps autoplay running even after user interaction
-        }, // Horizontal sliding (default)
+        //autoplay: {
+        //    delay: 2000,  // 2 seconds
+        //    disableOnInteraction: false, // Keeps autoplay running even after user interaction
+        //}, // Horizontal sliding (default)
     });
 
     // Initialize the second Swiper with autoplay every 2 seconds (and right-to-left direction)
@@ -592,13 +592,14 @@
         spaceBetween: 10,  // Space between slides
         slidesPerView: 1,  // Only 1 slide visible at a time
         
-        autoplay: {
-            delay: 2000,  // 2 seconds
-            disableOnInteraction: false, // Keeps autoplay running even after user interaction
-        }, 
+        //autoplay: {
+         //   delay: 2000,  // 2 seconds
+         //   disableOnInteraction: false, // Keeps autoplay running even after user interaction
+        //}, 
     });
 
-        AOS.init({ // Global animation duration
+        AOS.init({ 
+            once: true,
         }); 
     </script>
 </body>
