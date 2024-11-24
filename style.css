@@ -44,6 +44,15 @@ nav.right_logo {
     padding: 15px 0;
     margin: 0;
 }
+.animate-text {
+    font-size: 100px;
+    font-weight: 900;
+    line-height: initial;
+    text-shadow: 0 0 16px #000000;
+}
+.line2{
+    color: var(--secondary-color);
+}
 .contact_info a {
     color: #fff;
     text-decoration: none;
@@ -66,8 +75,8 @@ img.header_icon {
     height: 100%;
     width: 100%;
     position: absolute;
-    z-index: 3;
-    background: linear-gradient(to top right, #000000, transparent);
+    z-index: 1;
+    background: linear-gradient(to top right, #1b1a1b, transparent);
 }
 
 h1.banner_text span {
@@ -717,7 +726,7 @@ footer::after {
 
 .carousel-caption {
     position: absolute;
-    top: 35%;
+    top: 30%;
     bottom: unset;
     color: #fff;
     font-size: 25px;
@@ -725,7 +734,7 @@ footer::after {
     text-align: left;
     max-width: 100%;
     z-index: 5;
-    animation: slideInLeft 1s ease-out forwards;
+    /* animation: slideInLeft 1s ease-out forwards; */
 }
 
 .carousel-caption h5 {
@@ -741,15 +750,16 @@ footer::after {
 .donate_button {
     font-size: 20px;
     color: #fff;
-    border: 2px solid white;
-    padding: 4px 18px;
+    /* border: 2px solid white; */
+    padding: 6px 25px;
     border-radius: 35px;
-    width: 190px;
+    width: 210px;
     background: #feb21f;
     position: relative;
     z-index: 3;
     overflow: hidden;
     font-weight: 600;
+    margin-top: 20px;
 }
 
 .donate_button span {
@@ -757,7 +767,7 @@ footer::after {
 }
 
 .donate_button span img {
-    width: 25px;
+    width: 26px;
 }
 
 .donate_button:after {
@@ -780,11 +790,16 @@ footer::after {
     opacity: 1;
 }
 
-.swiper-slide {
-    display: flex;
-    justify-content: center;
-    padding: 15px 20px;
+
+.swiper-container{
+    width: 100%;
 }
+
+.slider-padding{
+    padding: 0!important;
+    overflow: hidden;
+}
+
 
 .card {
     width: 100%;
@@ -795,74 +810,58 @@ footer::after {
     padding: 45px 0;
 }
 
-.achievements_section .swiper-horizontal {
-    overflow: hidden;
-    padding: 0 2px;
-}
 
-.achieve_card {
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 0 4px grey;
-    border-radius: 6px;
-    width: 100%;
-    text-align: center;
-    transition: .5s;
-    min-height: 420px;
-}
 
-.achieve_card-body {
-    border-top: 6px solid var(--primary-color);
-    padding: 20px;
-}
-.achieve_card-body h5 {
-    font-size: 30px;
-    font-weight: 700;
-    font-family: "Lato", sans-serif;;
-    color: #000;
-}
-.achieve_card:after {
-    content: ' ';
-    position: absolute;
-    width: 0;
-    height: 0;
-    /* background: var(--primary-color); */
-    transition: .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border-left: 18px solid #fff0;
-    border-right: 18px solid #fff0;
-    border-top: 18px solid var(--primary-color);
-    top: 0;
-    left: 47%;
-}
 
-.achieve_card_img {
+.swiper-slide {
+    background: transparent;
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 20px 0;
+    align-items: center;
+    font-size: 20px;
+}
+#swiper1{
+    background: url(img/card1.JPG);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+#swiper2{
+    background: url(img/card2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.achievement_card {
+    padding: 10% 15%;
     position: relative;
+    color: #fff;
+    
 }
-
-.achieve_card_img img {
-    width: 105px;
+.achive_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--secondary-color);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: .6;
 }
-.swiper-button-next, .swiper-button-prev{
-    color: var(--primary-color);
-    top: var(--swiper-navigation-top-offset, 60%);
-    width: calc(var(--swiper-navigation-size) / 44* 120);
-
+.achieve_content{
+    position: relative;
+    z-index: 3;
 }
-.swiper-pagination-bullet-active{
-    background-color: var(--primary-color);
+.achive_overlay2{
+background-color: var(--primary-color);
 }
-
-.achieve_card:hover {
-    transition: .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    box-shadow: 0 0 8px #292828;
+.achieve_title {
+    font-size: 45px;
+    font-weight: 900;
+    line-height: initial;
+    padding-bottom: 15px;
 }
-.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
-    bottom: auto;}
-
     @keyframes slideInLeft {
         0% {
             transform: translateY(100%);
@@ -910,21 +909,8 @@ footer::after {
         .carousel-control-next, .carousel-control-prev{
             width: 8%;
         }
-        .swiper-button-next, .swiper-button-prev {
-            width: calc(var(--swiper-navigation-size) / 44* 60);
-        }
-        .achieve_card{
-            min-height: 380px;
-        }
-        p.achieve_card-text {
-            font-size: 15px;
-            text-align: justify;
-            margin-bottom: 0;
-            line-height: initial;
-        }
-        .achieve_card-body h5 {
-            font-size: 23px;
-        }
+        
+        
         .cards{
             font-size: 24px;
         }
@@ -955,9 +941,6 @@ footer::after {
         .social_media{
             gap: 15px;
         }
-        .swiper-button-next:after, .swiper-button-prev:after {
-            font-size: 40px;
-        }
     }
     @media screen and (max-width:577px) {
         nav.right_logo {
@@ -987,14 +970,9 @@ footer::after {
             margin: auto;
             font-size: 16px;
         }
-        .swiper-button-next, .swiper-button-prev {
-            width: calc(var(--swiper-navigation-size) / 44* 10);
-        }
+        
         .cards_section {
             padding: 25px 0 0;
-        }
-        .achieve_card {
-            min-height: 300px;
         }
         .cards_row {
             display: block;
@@ -1051,9 +1029,6 @@ footer::after {
         .heading{
             font-size: 30px;
         }
-        .swiper-button-next:after, .swiper-button-prev:after {
-            font-size: 30px;
-        }
         .listings ul li a{
             font-size: 16px;
         } 
@@ -1108,9 +1083,6 @@ footer::after {
         } 
         .copyright{
             font-size: 10px;
-        }  
-        .swiper-button-next:after, .swiper-button-prev:after {
-            font-size: 25px;
         }
         .bottom_text{
             font-size: 50px;
