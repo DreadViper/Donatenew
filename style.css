@@ -1114,3 +1114,6 @@ footer::after {
             gap: 10px;
         }
     }
+.blue-card{
+    background: #403a60;
+}
