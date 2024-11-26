@@ -910,12 +910,11 @@ footer::after {
         .carousel-caption{
             top: 25%;
         }
+        .cards{
+            font-size: 25px;
+          }
       }
-      @media screen and (max-width:1281px){
-      .cards{
-        font-size: 25px;
-      }
-    }
+    
     @media screen and (max-width:1025px) {
         .carousel-caption{
             left: 8%;
