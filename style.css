@@ -118,7 +118,7 @@ h1.banner_text span {
     align-items: center;
     justify-content: center;
     transition: .5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
-    border-radius: 10px;
+    border-radius: 35px;
 }
 
 .cards:nth-child(2) {
@@ -526,7 +526,7 @@ footer::after {
     background-repeat: no-repeat;
     top: 0;
     right: 0;
-    opacity: .2;
+    opacity: .1;
 }
 
 .listings ul {
@@ -778,7 +778,9 @@ footer::after {
     transform-origin: left;
     opacity: 0;
 }
-
+.donate_button:hover,.cards:hover , .news_card_image:hover , .grid_card:hover{
+    cursor: pointer;
+}
 .donate_button:hover::after {
     width: 100%;
     transition: .5s;
