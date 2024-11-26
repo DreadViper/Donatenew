@@ -746,7 +746,46 @@ footer::after {
     font-weight: 600;
     margin-top: 20px;
 }
-
+/* Fade-up Animation */
+@keyframes fadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(70px); /* Slide in from below */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Fade-down Animation */
+  @keyframes fadeDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-70px); /* Slide in from above */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Apply animation for fade-up and fade-down */
+  .fade-up {
+    animation: fadeUp 2s ease-out forwards;
+  }
+  
+  .fade-down {
+    animation: fadeDown 2s ease-out forwards;
+  }
+  
+  /* Initially hide carousel captions */
+  .carousel-caption .line1,
+  .carousel-caption .line2,
+  .carousel-caption .donate_button {
+    opacity: 0; /* Hidden initially */
+  }
+  
 .donate_button span {
     padding-left: 12px;
 }
