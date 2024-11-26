@@ -925,14 +925,20 @@ footer::after {
             padding: 0px 0 45px 0;
         }
     }
-
+    .downloadicon{
+        display: none;
+    }
+    @media screen and (max-width:790px) {
+    .contact_info a{
+        display: none;
+    }
+    .downloadicon{
+        display: block;
+    }
+}
     @media screen and (max-width:769px) {
         .banner_section {
             height: 65vh;
-        }
-        
-        .contact_info a{
-            display: none;
         }
         .cards_row{
             gap: 10px;
