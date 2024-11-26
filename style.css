@@ -889,6 +889,11 @@ footer::after {
             line-height: 35px;
         }
       }
+      @media screen and (max-width:1281px){
+      .cards{
+        font-size: 25px;
+      }
+    }
     @media screen and (max-width:1025px) {
         .carousel-caption{
             left: 8%;
@@ -928,6 +933,15 @@ footer::after {
     .downloadicon{
         display: none;
     }
+    @media screen and (max-width:991px) {
+    .cards_row{
+        gap:15px;
+    }
+    .cards{
+        font-size: 20px;
+        border-radius: 20px;
+    }
+}
     @media screen and (max-width:790px) {
     .contact_info a{
         display: none;
@@ -940,11 +954,14 @@ footer::after {
         .banner_section {
             height: 65vh;
         }
-        .cards_row{
-            gap: 10px;
+        .cards_row {
+            display: block;
+            margin-left: 10%;
         }
-        .cards{
-            padding: 10px;
+        .cards {
+            width: 90%;
+            margin-bottom: 30px;
+            font-size: 25px;
         }
         .news_card:nth-child(3){
             display: none;
@@ -992,14 +1009,7 @@ footer::after {
         .cards_section {
             padding: 25px 0 0;
         }
-        .cards_row {
-            display: block;
-            margin-left: 10%;
-        }
-        .cards {
-            width: 90%;
-            margin-bottom: 30px;
-        }
+      
         .news_card:nth-child(2){
             display: none;
         }
@@ -1052,6 +1062,9 @@ footer::after {
         } 
         .grid_card_content {
             font-size: 20px;
+        }
+        .achieve_title {
+            font-size: 35px;
         }
     }
     @media screen and (max-width:475px) {
