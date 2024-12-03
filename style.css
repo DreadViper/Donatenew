@@ -53,6 +53,12 @@ nav.right_logo {
     line-height: initial;
     text-shadow: 0 0 16px #000000;
 }
+.org .contri{
+    font-weight: 700;
+    text-shadow: 0 0 2px red;
+    color: var(--primary-color);
+    -webkit-text-stroke: .3px red;
+}
 .line2{
     color: var(--secondary-color);
 }
@@ -490,7 +496,7 @@ footer::after {
 .donate_tag {
     width: 100px;
     height: 100px;
-    background: var(--primary-color);
+    background: var(--secondary-color);
     border-radius: 50%;
     display: flex;
     text-align: center;
@@ -503,6 +509,12 @@ footer::after {
     color: #fff;
     /* border: 4px solid var(--secondary-color); */
     box-shadow: #212529 1px 4px 8px;
+}
+.donate_tag img {
+    width: 75%;
+    height: 75%;
+    object-fit: cover;
+    /* box-shadow: 0 0 10px white; */
 }
 
 .donate_tag:hover {
@@ -868,11 +880,12 @@ footer::after {
     width: 100%;
     height: 100%;
     z-index: 1;
-    opacity: .6;
+    opacity: .9;
 }
 .achieve_content{
     position: relative;
     z-index: 3;
+    text-shadow: 0 0 8px BLACK;
 }
 .achive_overlay2{
     background-color: var(--primary-color);
@@ -947,9 +960,6 @@ footer::after {
         .news_section {
             padding: 0px 0 45px 0;
         }
-    }
-    .downloadicon{
-        display: none;
     }
     @media screen and (max-width:991px) {
     .cards_row{
