@@ -427,6 +427,7 @@ footer::after {
     width: 100%;
     position: relative;
     z-index: 3;
+    padding: 0 15px;
 }
 
 .icon_box {
@@ -862,6 +863,9 @@ footer::after {
     color: #fff;
     min-height: 420px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .achievement_card img {
     width: 100%;
@@ -961,7 +965,7 @@ footer::after {
             padding: 0px 0 45px 0;
         }
     }
-    @media screen and (max-width:991px) {
+    @media screen and (max-width:993px) {
     .cards_row{
         gap:15px;
     }
@@ -969,21 +973,26 @@ footer::after {
         font-size: 20px;
         border-radius: 20px;
     }
+    .animate-text {
+        font-size: 70px;
+    }
 }
+
 @media screen and (max-width:790px) {
 .contact_info a{
     display: none;
 }
-}
-    @media screen and (max-width:790px) {
     .downloadicon{
         display: block;
     }
+    .animate-text {
+        font-size: 60px;
+    }
 }
     @media screen and (max-width:769px) {
-        .banner_section {
+        /* .banner_section {
             height: 65vh;
-        }
+        } */
         .cards_row {
             display: block;
             margin-left: 10%;
@@ -1002,8 +1011,11 @@ footer::after {
         .social_media{
             gap: 15px;
         }
+       
+    }
+    @media screen and (max-width:628px) {
         .animate-text {
-            font-size: 70px;
+            font-size: 50px;
         }
     }
     @media screen and (max-width:577px) {
@@ -1096,7 +1108,7 @@ footer::after {
             list-style: none;
             column-count: 2;
             text-align: left;
-            margin-left: 3%;
+            margin-left: 0;
         } 
         .heading {
             line-height: initial;
@@ -1108,6 +1120,7 @@ footer::after {
         .animate-text {
             font-size: 40px;
         }
+       
     }
 
     @media screen and (max-width:376px){
@@ -1117,9 +1130,9 @@ footer::after {
         .donar_name{
             font-size: 15px;
         }
-        .copylisting ul {
-            column-count: 1;
-        }  
+        .copylisting a {
+            font-size: 13px;
+        }
         .text_wrapper {
             padding: 35px 15px;
         }
@@ -1156,6 +1169,9 @@ footer::after {
             
         .social_media {
             gap: 10px;
+        }
+        .animate-text {
+            font-size: 30px;
         }
     }
 .blue-card{
