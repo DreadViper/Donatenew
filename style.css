@@ -68,8 +68,8 @@ nav.right_logo {
     text-decoration: none;
 }
 img.header_icon {
-    width: 17px;
-    height: 17px;
+    width: 25px;
+    height: auto;
 }
 .banner_section {
     height: 100vh;
@@ -402,7 +402,9 @@ footer::after {
     background: #403a60;
     padding: 8px 16px;
     border-radius: 8px;
-    /* box-shadow: 1px 0 10px #2c2647; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .cards_img {
     position: absolute;
@@ -1179,6 +1181,10 @@ footer::after {
         }
         .animate-text {
             font-size: 30px;
+        }
+        .org:nth-child(2){
+            background: none;
+            padding: 0;
         }
     }
 .blue-card{
