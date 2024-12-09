@@ -399,10 +399,10 @@ footer::after {
 }
 
 .org:nth-child(2) {
-    background: #ab5994;
+    background: #403a60;
     padding: 8px 16px;
     border-radius: 8px;
-    box-shadow: 1px 0 10px #701757;
+    /* box-shadow: 1px 0 10px #2c2647; */
 }
 .cards_img {
     position: absolute;
