@@ -399,12 +399,24 @@ footer::after {
 }
 
 .org:nth-child(2) {
-    background: #403a60;
+    background:#ab5994;
     padding: 8px 16px;
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.svg_contri , .mail-icon{
+    position: relative;
+    height: 30px;
+    width: 30px;
+}
+svg.mail-icon path {
+    fill: #fff;
+}
+.svg_contri path.st0 {
+    stroke: #6c757d;
+    fill: #fff;
 }
 .cards_img {
     position: absolute;
