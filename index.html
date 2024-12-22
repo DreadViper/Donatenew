@@ -7,7 +7,7 @@
     <title>Donate now!</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -376,8 +376,7 @@ C44.51,8.61,44.66,8.92,44.82,9.25z" />
         <section class="news_section" data-aos="fade-left">
             <div class="title_heading">
                 <div class="heading">Instant Insights, Real-Time Updates</div>
-                <div class="pseudo_text">Be part of the conversation with the latest updates. Get the latest updates
-                    and deep analysis right at your fingertips.</div>
+                <div class="pseudo_text">Be part of the conversation with the latest updates. Get the latest insights and deep analysis right at your fingertips.</div>
             </div>
             <div class="container">
                 <div class="news_card_wrapper">
@@ -585,35 +584,45 @@ C44.51,8.61,44.66,8.92,44.82,9.25z" />
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script rel="preload" src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="js/count.js"></script>
     <script src="js/animate.js"></script>
     <script>
-        var swiper1 = new Swiper('#swiper1', {
-            loop: true,  // Enable looping
-            spaceBetween: 10,  // Space between slides
-            slidesPerView: 1,  // Only 1 slide visible at a time
-            autoplay: {
-                delay: 4000,  // 4 seconds
-                disableOnInteraction: false, // Keeps autoplay running even after user interaction
-            }, // Horizontal sliding (default)
-        });
+        setTimeout(function () {
+            var swiper2 = new Swiper('#swiper1', {
+                loop: true,  // Enable looping
+                spaceBetween: 10,  // Space between slides
+                slidesPerView: 1,  // Only 1 slide visible at a time
+
+                autoplay: {
+                    delay: 4000,  // 4 seconds autoplay delay
+                    disableOnInteraction: false, // Keeps autoplay running even after user interaction
+                },
+            });
+        }, 3000);
 
         // Initialize the second Swiper with autoplay every 2 seconds (and right-to-left direction)
-        var swiper2 = new Swiper('#swiper2', {
-            loop: true,  // Enable looping
-            spaceBetween: 10,  // Space between slides
-            slidesPerView: 1,  // Only 1 slide visible at a time
+        setTimeout(function () {
+            var swiper2 = new Swiper('#swiper2', {
+                loop: true,  // Enable looping
+                spaceBetween: 10,  // Space between slides
+                slidesPerView: 1,  // Only 1 slide visible at a time
 
-            autoplay: {
-                delay: 4000,  // 4 seconds
-                disableOnInteraction: false, // Keeps autoplay running even after user interaction
-            },
-        });
+                autoplay: {
+                    delay: 4000,  // 4 seconds autoplay delay
+                    disableOnInteraction: false, // Keeps autoplay running even after user interaction
+                },
+            });
+        }, 3000);
 
-        AOS.init({
-            //once: true,
-        });
+
+        if (window.innerWidth > 768) {  // Apply AOS only on larger screens
+            AOS.init({
+                debounceDelay: 50,  // Delay in ms for debouncing scroll event
+                throttleDelay: 99   // Throttle the event for better performance
+            });
+        }
+
 
     </script>
 </body>
