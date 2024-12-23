@@ -87,36 +87,21 @@ font-size:14px;
     color: var(--secondary-color);
 }
 
-
-
-.benefits-row {
-    display: flex;
-    gap: 50px;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.benefits-heading {
-    width: 610px;
-}
-
 .join-card {
     padding: 20px;
-    min-width: 280px;
     border: 1px solid transparent;
     border-radius: 13px;
     background: #fff;
     box-shadow: 5px 5px 15px #e7cc96;
     transition: .3s all;
     cursor: pointer;
-    max-width: 280px;
+    margin-bottom: 25px;
 }
 
 .join-card:hover {
     background: #fff2da;
     transition: .3s all;
     border: 1px solid var(--primary-color);
-    /* max-width: 250px; */
     box-shadow: 5px 5px 15px #d7a0c8;
 }
 
