@@ -138,3 +138,26 @@ h2.benefits-title b {
 }
 
 /* join section css end */
+
+@media screen and (max-width: 991px) {
+    .loginwrap {
+        padding: 20px;
+    }
+    h2.benefits-title {
+        font-size: 28px;
+        line-height: 40px;
+    }
+    .benefits-heading {
+        padding-bottom: 30px;
+    }
+}
+@media screen and (max-width: 767px) {
+.login-left {
+    display: none;
+}
+}
+@media screen and (max-width: 576px) {
+nav.right_logo.right_logo_auth {
+    padding: 15px;
+}
+}
